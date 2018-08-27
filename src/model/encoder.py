@@ -5,15 +5,15 @@ from tensorflow.contrib import keras
 
 class Encoder:
     """
-        Uses the pretrained model InceptionV3 in Keras as the Encoder to
-        produce image encodings.
+        Module to create the CNN based encoder.
+        Currently supports InceptionV3 only.
     """
 
     def __init__(self, model='InceptionV3', learning=False):
         self.model = model
         self.learning = learning
 
-    def get_cnn_encoder_prepro(self):
+    def get_cnn_encoder_preprocessor(self):
         """
             Creates and returns the pretrained CNN and its preprocessing unit,
             based on init params. Currently supports only InceptionV3.
